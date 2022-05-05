@@ -169,15 +169,15 @@ function draw() {
     popSound: function() {
       var d = dist(mouseX, mouseY, this.xPos, this.yPos);
       if (d < this.diameter / 2) { // if mouse touches a circle, it disappears
-        this.checkPop = true; // checkPop is true when mouse touches circle
-        if (!this.once && this.xPos < windowWidth/2) {
+          this.checkPop = true; // checkPop is true when mouse touches circle
+          if (!this.once && this.xPos < windowWidth/2) {
           popper.play(); // Sound plays only once for every bubble popped
           popper.setVolume(random(1,10))
           this.once = true;
           bubbleCounter++; // keeps track of how many bubbles are popped each level
           print(bubbleCounter);
-        }
-         if(this.xPos > windowWidth/2 && !this.once){
+          }
+          if (this.xPos > windowWidth/2 && !this.once) {
           popped.play(); // Sound plays only once for every bubble popped
           this.once = true;
           popped.setVolume(random(1,10));
